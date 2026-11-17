@@ -13,5 +13,4 @@ def register_user():
     db = DbConnectionHandler()
     users_repository = UsersRepository(db)
     user_controller = UserCreator(users_repository)
-    user_controller.insert_new_user(user.name, user.email, user.password)
-    return {"message": "User registered successfully"}, 201
+    return user_controller.insert_new_user(user.name, user.email, user.password)
