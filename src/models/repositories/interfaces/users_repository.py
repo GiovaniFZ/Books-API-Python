@@ -7,5 +7,5 @@ class UsersRepositoryInterface(ABC):
         pass
 
     @abstractclassmethod
-    def select_user(self, name: str) -> list[Users]:
+    def select_user(self, email: str) -> list[Users]:
         pass
